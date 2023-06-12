@@ -1,0 +1,91 @@
+---
+import Attribution from '../components/Attribution.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/qr-code/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | QR code component</title>
+</head>
+<body>
+
+  <div class="card">
+    <div class="qr-container">
+      <img src="/qr-code/images/image-qr-code.png" alt="QR-code" />
+    </div>
+    <div class="content">
+      <h2>Improve your front-end skills by building projects</h1>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </div>
+
+  <footer>
+    <Attribution />
+  </footer>
+</body>
+</html>
+
+<style>
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+  }
+
+  body, html {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body, html {
+    background-color: var(--light-gray);
+    font-family: 'Outfit', sans-serif;
+    display: grid;
+  }
+
+  .card {
+    max-width: 325px;
+    border-radius: 20px;
+    background-color: var(--white);
+    padding: 25px;
+    box-shadow: 0px 0px 1.5em hsl(212, 45%, 89%);
+    place-self: center;
+    justify-self: center;
+  }
+
+  .qr-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: var(--dark-blue);
+  }
+
+  p {
+    color: var(--grayish-blue);
+  }
+  
+  footer {
+    place-self: end;
+    justify-self: center;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .content {
+    text-align: center;
+  }
+</style>
